@@ -559,10 +559,29 @@ document.getElementById('txDate').value = new Date().toISOString().split('T')[0]
 document.addEventListener('DOMContentLoaded', init);
 
 function setupGoalEventListeners() {
-  document.getElementById('btnSetGoal').addEventListener('click', () => {
-    document.getElementById('goalModal').classList.add('active');
-    calculateGoalValues();
-  });
+  const setGoalBtn = document.getElementById('btnSetGoal');
+  const updateSavedBtn = document.getElementById('btnUpdateSaved');
+  
+  if (setGoalBtn) {
+    setGoalBtn.addEventListener('click', function() {
+      console.log('btnSetGoal clicked');
+      document.getElementById('goalModal').classList.add('active');
+      calculateGoalValues();
+    });
+  }
+  
+  if (updateSavedBtn) {
+    updateSavedBtn.addEventListener('click', function() {
+      console.log('btnUpdateSaved clicked');
+      const currentSaved = goalData.saved;
+      const newSaved = prompt('Digite o valor que você tem guardado:', currentSaved);
+      if (newSaved !== null && !isNaN(parseFloat(newSaved))) {
+        goalData.saved = parseFloat(newSaved);
+        saveGoalData();
+        renderGoalProgress();
+      }
+    });
+  }
   
   document.getElementById('closeGoalModal').addEventListener('click', () => {
     document.getElementById('goalModal').classList.remove('active');
@@ -578,16 +597,23 @@ function setupGoalEventListeners() {
   document.getElementById('monthlyContribution').addEventListener('input', calculateGoalValues);
   
   document.getElementById('saveGoalBtn').addEventListener('click', saveGoal);
-  
-  document.getElementById('btnUpdateSaved').addEventListener('click', () => {
-    const currentSaved = goalData.saved;
-    const newSaved = prompt('Digite o valor que você tem guardado:', currentSaved);
-    if (newSaved !== null && !isNaN(parseFloat(newSaved))) {
-      goalData.saved = parseFloat(newSaved);
-      saveGoalData();
-      renderGoalProgress();
-    }
-  });
+}
+
+function openGoalModal() {
+  console.log('openGoalModal called');
+  document.getElementById('goalModal').classList.add('active');
+  calculateGoalValues();
+}
+
+function updateSavedAmount() {
+  console.log('updateSavedAmount called');
+  const currentSaved = goalData.saved;
+  const newSaved = prompt('Digite o valor que você tem guardado:', currentSaved);
+  if (newSaved !== null && !isNaN(parseFloat(newSaved))) {
+    goalData.saved = parseFloat(newSaved);
+    saveGoalData();
+    renderGoalProgress();
+  }
 }
 
 function calculateGoalValues() {
