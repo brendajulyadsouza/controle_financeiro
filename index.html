@@ -3,39 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FinancePro - Controle Financeiro</title>
+  <meta name="description" content="FinancePro - Controle financeiro pessoal profissional. Gerencie suas entradas, saídas e planeje a compra do seu carro com acompanhamento de meta." />
+  <meta name="keywords" content="controle financeiro, finanças pessoais, gestão de gastos, planejamento financeiro, meta de carro, economia" />
+  <meta name="author" content="FinancePro" />
+  <meta property="og:title" content="FinancePro | Painel Financeiro" />
+  <meta property="og:description" content="Controle suas finanças e alcance suas metas financeiras com profissionalismo." />
+  <meta property="og:type" content="website" />
+  <title>FinancePro | Painel Financeiro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="bg-gradient"></div>
-  <div class="bg-grid"></div>
-  
+  <div class="bg-layer bg-soft-pattern"></div>
+  <div class="bg-layer bg-orb bg-orb-top"></div>
+  <div class="bg-layer bg-orb bg-orb-bottom"></div>
+
   <header class="header">
     <div class="header-brand">
       <div class="logo">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-          <rect width="36" height="36" rx="10" fill="url(#logoGrad)"/>
-          <path d="M10 18L16 12L22 18L16 24L10 18Z" fill="white"/>
-          <path d="M16 18L22 12L28 18L22 24L16 18Z" fill="white" opacity="0.5"/>
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+          <rect width="38" height="38" rx="12" fill="url(#logoBrandGradient)"/>
+          <path d="M10 20L16 14L22 20L16 26L10 20Z" fill="white"/>
+          <path d="M16 20L22 14L28 20L22 26L16 20Z" fill="white" opacity="0.55"/>
           <defs>
-            <linearGradient id="logoGrad" x1="0" y1="0" x2="36" y2="36">
-              <stop stop-color="#9333ea"/>
-              <stop offset="1" stop-color="#7c3aed"/>
+            <linearGradient id="logoBrandGradient" x1="0" y1="0" x2="38" y2="38">
+              <stop stop-color="#8b5cf6"/>
+              <stop offset="1" stop-color="#a855f7"/>
             </linearGradient>
           </defs>
         </svg>
-        <span class="logo-text">FinancePro</span>
+        <div class="logo-texts">
+          <span class="logo-text">FinancePro</span>
+          <span class="logo-subtitle">Controle financeiro pessoal</span>
+        </div>
       </div>
     </div>
     <div class="header-actions">
       <span class="current-date" id="currentDate"></span>
-      <button class="btn-icon" title="Configurações">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <button class="btn-icon" title="Configurações" aria-label="Abrir configurações">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
           <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/>
-          <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+          <path d="M19.4 15a1.7 1.7 0 00.35 1.84l.06.06a2 2 0 010 2.82 2 2 0 01-2.82 0l-.06-.06a1.7 1.7 0 00-1.84-.35 1.7 1.7 0 00-1.03 1.57V21a2 2 0 01-2 2 2 2 0 01-2-2v-.12A1.7 1.7 0 009 19.35a1.7 1.7 0 00-1.84.35l-.06.06a2 2 0 01-2.82 0 2 2 0 010-2.82l.06-.06A1.7 1.7 0 004.85 15a1.7 1.7 0 00-1.57-1.03H3a2 2 0 01-2-2 2 2 0 012-2h.28A1.7 1.7 0 004.85 9a1.7 1.7 0 00-.35-1.84l-.06-.06a2 2 0 010-2.82 2 2 0 012.82 0l.06.06A1.7 1.7 0 009 4.85a1.7 1.7 0 001.03-1.57V3a2 2 0 012-2 2 2 0 012 2v.28A1.7 1.7 0 0015 4.85a1.7 1.7 0 001.84-.35l.06-.06a2 2 0 012.82 0 2 2 0 010 2.82l-.06.06A1.7 1.7 0 0019.15 9c0 .68.4 1.29 1.03 1.57H21a2 2 0 012 2 2 2 0 01-2 2h-.82A1.7 1.7 0 0019.4 15z"/>
         </svg>
       </button>
     </div>
@@ -43,50 +53,149 @@
 
   <main class="dashboard">
     <section class="goal-banner">
-      <div class="goal-car-info">
-        <div class="goal-car-icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M5 17h14M6 17l1-6h10l1 6M9 17v-4a2 2 0 012-2h2a2 2 0 012 2v4M6 17V10l1.5-3h9l1.5 3v7"/>
-            <circle cx="7.5" cy="17.5" r="1.5" fill="currentColor"/>
-            <circle cx="16.5" cy="17.5" r="1.5" fill="currentColor"/>
-          </svg>
+      <div class="goal-banner-content">
+        <div class="goal-visual">
+          <div class="goal-car-icon">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M5 17h14M6 17l1-6h10l1 6M9 17v-4a2 2 0 012-2h2a2 2 0 012 2v4M6 17V10l1.5-3h9l1.5 3v7"/>
+              <circle cx="7.5" cy="17.5" r="1.5" fill="currentColor"/>
+              <circle cx="16.5" cy="17.5" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
         </div>
-        <div class="goal-car-details">
-          <p class="goal-label">META DE COMPRA</p>
-          <h2 class="goal-car-name">Jeep Renegade Longitude 1.8 2020</h2>
-          <p class="goal-car-price" id="goalCarPrice">R$ 75.516</p>
+        <div class="goal-banner-header">
+          <div class="goal-banner-title">
+            <p class="goal-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
+              </svg>
+              Meta do Carro
+            </p>
+            <h2 class="goal-car-name" id="goalCarName">Jeep Renegade Longitude 1.8 2020</h2>
+            <div class="goal-car-meta">
+              <p class="goal-car-price" id="goalCarPrice">R$ 75.516,00</p>
+              <span class="goal-fipe-tag">FIPE março/2026</span>
+            </div>
+          </div>
+          <span class="goal-status attention" id="goalStatus">Planejamento pendente</span>
         </div>
       </div>
-      <div class="goal-progress-section">
-        <div class="goal-stats">
-          <div class="goal-stat">
+
+      <div class="goal-progress-layout">
+        <div class="goal-progress-block">
+          <div class="goal-progress-header">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+              Progresso da meta
+            </span>
+            <strong id="goalPercentLabel">0%</strong>
+          </div>
+          <div class="goal-progress-bar">
+            <div class="goal-progress-fill" id="goalProgressFill"></div>
+          </div>
+          <p class="goal-progress-text"><span id="goalPercent">0</span>% do valor total</p>
+        </div>
+
+        <div class="goal-progress-block goal-entry-block">
+          <div class="goal-progress-header">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+              </svg>
+              Entrada mínima (30%)
+            </span>
+            <strong id="entryPercent">0%</strong>
+          </div>
+          <div class="goal-progress-bar entry-bar">
+            <div class="goal-progress-fill entry-fill" id="entryProgressFill"></div>
+          </div>
+          <p class="goal-progress-text">Valor necessário para dar entrada</p>
+        </div>
+      </div>
+
+      <div class="goal-insights">
+        <div class="goal-stat">
+          <div class="goal-stat-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+            </svg>
+          </div>
+          <div class="goal-stat-content">
             <span class="goal-stat-label">Já guardado</span>
             <span class="goal-stat-value" id="savedAmount">R$ 0,00</span>
           </div>
-          <div class="goal-stat">
+        </div>
+        <div class="goal-stat">
+          <div class="goal-stat-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+          </div>
+          <div class="goal-stat-content">
             <span class="goal-stat-label">Falta</span>
             <span class="goal-stat-value" id="remainingAmount">R$ 75.516,00</span>
           </div>
-          <div class="goal-stat">
-            <span class="goal-stat-label">Parcela sugerida</span>
-            <span class="goal-stat-value" id="suggestedPayment">R$ 1.500/mês</span>
+        </div>
+        <div class="goal-stat">
+          <div class="goal-stat-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <div class="goal-stat-content">
+            <span class="goal-stat-label">Aporte mensal</span>
+            <span class="goal-stat-value" id="suggestedPayment">R$ 1.500,00/mês</span>
           </div>
         </div>
-        <div class="goal-progress-bar">
-          <div class="goal-progress-fill" id="goalProgressFill"></div>
+        <div class="goal-stat">
+          <div class="goal-stat-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <path d="M16 2v4M8 2v4M3 10h18"/>
+            </svg>
+          </div>
+          <div class="goal-stat-content">
+            <span class="goal-stat-label">Previsão de compra</span>
+            <span class="goal-stat-value" id="goalForecast">Sem previsão</span>
+          </div>
         </div>
-        <p class="goal-progress-text"><span id="goalPercent">0</span>% concluído</p>
+        <div class="goal-stat">
+          <div class="goal-stat-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <div class="goal-stat-content">
+            <span class="goal-stat-label">Tempo estimado</span>
+            <span class="goal-stat-value" id="goalMonthsLeft">Defina aporte</span>
+          </div>
+        </div>
       </div>
+
       <div class="goal-actions">
-        <button class="btn-goal" id="btnSetGoal" onclick="openGoalModal()">Definir Valor Guardado</button>
-        <button class="btn-goal-outline" id="btnUpdateSaved" onclick="updateSavedAmount()">Atualizar Economia</button>
+        <button class="btn-goal" id="btnSetGoal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
+          </svg>
+          Planejar Meta
+        </button>
+        <button class="btn-goal-outline" id="btnUpdateSaved">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+          </svg>
+          Atualizar Economia
+        </button>
       </div>
     </section>
 
     <section class="stats-row">
       <article class="stat-card stat-balance">
         <div class="stat-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
           </svg>
         </div>
@@ -94,45 +203,40 @@
           <p class="stat-label">Saldo Total</p>
           <h2 class="stat-value" id="balanceValue">R$ 0,00</h2>
         </div>
-        <div class="stat-trend positive">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 15l-6-6-6 6"/>
-          </svg>
-        </div>
       </article>
 
       <article class="stat-card stat-income">
         <div class="stat-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <path d="M12 19V5M5 12l7-7 7 7"/>
           </svg>
         </div>
         <div class="stat-content">
-          <p class="stat-label">Entradas (Mês)</p>
+          <p class="stat-label">Entradas no mês</p>
           <h2 class="stat-value" id="monthIncomeValue">R$ 0,00</h2>
         </div>
       </article>
 
       <article class="stat-card stat-expense">
         <div class="stat-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <path d="M12 5v14M5 12l7 7 7-7"/>
           </svg>
         </div>
         <div class="stat-content">
-          <p class="stat-label">Saídas (Mês)</p>
+          <p class="stat-label">Saídas no mês</p>
           <h2 class="stat-value" id="monthExpenseValue">R$ 0,00</h2>
         </div>
       </article>
 
       <article class="stat-card stat-net">
         <div class="stat-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
           </svg>
         </div>
         <div class="stat-content">
-          <p class="stat-label">Resultado</p>
+          <p class="stat-label">Resultado do mês</p>
           <h2 class="stat-value" id="monthNetValue">R$ 0,00</h2>
         </div>
       </article>
@@ -144,7 +248,8 @@
           <h3>Fluxo de Caixa</h3>
           <div class="card-actions">
             <select id="chartPeriod">
-              <option value="6">Últimos 6 meses</option>
+              <option value="3">Últimos 3 meses</option>
+              <option value="6" selected>Últimos 6 meses</option>
               <option value="12">Últimos 12 meses</option>
             </select>
           </div>
@@ -183,7 +288,7 @@
             </div>
             <div class="form-group">
               <label for="txType">Tipo</label>
-              <div class="type-toggle">
+              <div class="type-toggle" id="txType">
                 <button type="button" class="type-btn active" data-type="income">Entrada</button>
                 <button type="button" class="type-btn" data-type="expense">Saída</button>
               </div>
@@ -224,43 +329,61 @@
   <div class="modal" id="goalModal">
     <div class="modal-content">
       <div class="modal-header">
-        <h3>Planejamento do Jeep Renegade</h3>
-        <button class="modal-close" id="closeGoalModal">&times;</button>
+        <h3>Planejamento da Meta do Carro</h3>
+        <button class="modal-close" id="closeGoalModal" aria-label="Fechar">&times;</button>
       </div>
       <div class="modal-body">
         <div class="goal-car-display">
           <div class="goal-car-image">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <svg width="78" height="78" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
               <path d="M5 17h14M6 17l1-6h10l1 6M9 17v-4a2 2 0 012-2h2a2 2 0 012 2v4M6 17V10l1.5-3h9l1.5 3v7"/>
               <circle cx="7.5" cy="17.5" r="1.5" fill="currentColor"/>
               <circle cx="16.5" cy="17.5" r="1.5" fill="currentColor"/>
             </svg>
           </div>
-          <h4>Jeep Renegade Longitude 1.8 2020</h4>
-          <p class="goal-price-display">R$ 75.516</p>
-          <p class="goal-fipe-reference">*Valor FIPE Março 2026</p>
+          <h4 id="modalGoalName">Jeep Renegade Longitude 1.8 2020</h4>
+          <p class="goal-price-display" id="modalGoalPrice">R$ 75.516,00</p>
+          <p class="goal-fipe-reference">Referência FIPE: março/2026</p>
         </div>
+
         <div class="goal-form-section">
           <div class="form-group">
             <label for="initialSaved">Valor já guardado (R$)</label>
             <input type="number" id="initialSaved" step="0.01" min="0" placeholder="0,00" />
           </div>
           <div class="form-group">
-            <label for="monthlyContribution">Quanto pode guardar por mês (R$)</label>
+            <label for="monthlyContribution">Aporte mensal planejado (R$)</label>
             <input type="number" id="monthlyContribution" step="0.01" min="0" placeholder="0,00" />
           </div>
+          <div class="form-group">
+            <label for="targetMonths">Prazo desejado (meses)</label>
+            <input type="number" id="targetMonths" min="1" step="1" placeholder="24" />
+          </div>
+
           <div class="goal-calculation">
             <div class="calc-result">
               <span>Entrada mínima (30%)</span>
-              <strong id="minEntry">R$ 22.655</strong>
+              <strong id="minEntry">R$ 22.654,80</strong>
             </div>
             <div class="calc-result">
-              <span>Financiamento needed</span>
-              <strong id="financingNeeded">R$ 52.861</strong>
+              <span>Falta para entrada mínima</span>
+              <strong id="remainingToEntry">R$ 22.654,80</strong>
             </div>
             <div class="calc-result">
-              <span>Parcela mensal (48x)</span>
-              <strong id="monthlyParcel">R$ 1.351</strong>
+              <span>Valor a financiar</span>
+              <strong id="financingNeeded">R$ 75.516,00</strong>
+            </div>
+            <div class="calc-result">
+              <span>Parcela estimada (48x sem juros)</span>
+              <strong id="monthlyParcel">R$ 1.573,25</strong>
+            </div>
+            <div class="calc-result">
+              <span>Aporte necessário para o prazo</span>
+              <strong id="requiredMonthly">R$ 3.146,50</strong>
+            </div>
+            <div class="calc-result">
+              <span>Previsão da meta com aporte atual</span>
+              <strong id="goalForecastModal">Sem previsão</strong>
             </div>
           </div>
         </div>
@@ -275,7 +398,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h3>Todas as Transações</h3>
-        <button class="modal-close" id="closeFilterModal">&times;</button>
+        <button class="modal-close" id="closeFilterModal" aria-label="Fechar">&times;</button>
       </div>
       <div class="modal-filters">
         <div class="filter-group">
